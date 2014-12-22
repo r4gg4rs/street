@@ -1,6 +1,9 @@
 (function() {
   window.onload(function() {
-    return this.game = new Street();
+    var game;
+    game = new Street();
+    game.init();
+    return game.render();
   });
 
 }).call(this);

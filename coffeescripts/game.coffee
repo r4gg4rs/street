@@ -13,7 +13,7 @@ class Street
     @renderer.setSize(window.innerWidth,window.innerHeight)
     $("#render").append(@renderer.domElement)
     car = new Car()
-    @scene.add(car)
+    @scene.add(car.geometry)
   render:()=>
     @renderer.render(@scene,@camera)
   update:()=>

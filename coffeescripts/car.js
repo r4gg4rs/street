@@ -1,18 +1,12 @@
 (function() {
-  var Car,
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+  var Car;
 
-  Car = (function(_super) {
-    __extends(Car, _super);
-
-    function Car() {
-      return Car.__super__.constructor.apply(this, arguments);
-    }
+  Car = (function() {
+    function Car() {}
 
     return Car;
 
-  })(THREE.Mesh);
+  })();
 
   ({
     constructor: function() {
@@ -21,7 +15,7 @@
       material = new THREE.MeshBasicMaterial({
         color: 0xffffff
       });
-      return THREE.Mesh.call(this, geometry, material);
+      return this.graphics = new THREE.Mesh(geometry, material);
     }
   });
 
