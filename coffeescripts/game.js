@@ -16,12 +16,12 @@
       var car;
       this.scene = new THREE.Scene();
       this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-      this.renderer = new THREE.WebGLRendeer();
+      this.renderer = new THREE.WebGLRenderer();
       this.renderer.setClearColor(0x333333);
       this.renderer.setSize(window.innerWidth, window.innerHeight);
       $("#render").append(this.renderer.domElement);
       car = new Car();
-      return this.scene.add(car.geometry);
+      return this.scene.add(car);
     };
 
     Street.prototype.render = function() {
